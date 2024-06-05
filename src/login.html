@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- tailwind -->
+    <link rel="stylesheet" href="/src/css/main.css">
+    <link rel="stylesheet" href="/src/css/output.css">
+    <link rel="stylesheet" href="/src/css/style.css">
+
+    <title>Login</title>
+</head>
+<body>
+    <div class="h-screen flex justify-center items-center">
+        <div class="">
+
+            <div id="login" class="form-value form-box bg-green-400 p-8 rounded-lg shadow-md w-96">
+                <form id="loginForm"> 
+                    <div class="submit w-full justify-center items-center h-10 bg-white rounded-full text-black font-semibold text-lg cursor-pointer flex mb-10">
+                        <div class="hover-bg-green flex justify-center items-center outline-white w-50 submit h-10 bg-green-400 rounded-full text-white font-semibold text-lg cursor-pointer">
+                            <a onclick="showLogin()" href="#">Login</a>
+                        </div>
+                        <div class="flex justify-center items-center outline-white w-50 submit h-10 bg-white rounded-full text-black font-semibold text-lg cursor-pointer">
+                            <a onclick="showRegister()" href="#">Register</a>
+                        </div>
+                    </div>
+                    <h2 class="text-2x1 font-bold text-white mb-6">Login</h2>
+                    <div class="inputbox relative mb-4">
+                        <input type="text" id="username" required
+                            class="w-full h-12 bg-transparent border-b-2 border-white text-white outline-none focus:border-gray-300 mt-2" />
+                        <label for="username" class="absolute left-0 transition-all text-white">Username</label>
+                    </div>
+                    <div class="inputbox relative mb-4">
+                        <input type="password" id="password" required
+                            class="w-full h-12 bg-transparent border-b-2 border-white text-white outline-none focus:border-gray-300 mt-2" />
+                        <label for="password" class="absolute left-0 transition-all text-white">Password</label>
+                    </div>
+                    <button type="submit" value="Open"
+                        class="submit w-full h-10 bg-white rounded-full text-black font-semibold text-lg cursor-pointer">Submit</button>
+                </form>
+            </div>
+
+            <div id="register" class="hidden form-value form-box bg-green-400 p-8 rounded-lg shadow-md w-96">
+                <form id="registerForm"> 
+                    <div class="submit w-full justify-center items-center h-10 bg-white rounded-full text-black font-semibold text-lg cursor-pointer flex mb-10">
+                        <div class="flex justify-center items-center outline-white w-50 submit h-10 bg-white rounded-full text-black font-semibold text-lg cursor-pointer">
+                            <a onclick="showLogin()" href="#">Login</a>
+                        </div>
+                        <div class="flex justify-center items-center outline-white w-50 submit h-10 bg-green-400 rounded-full text-white font-semibold text-lg cursor-pointer">
+                            <a onclick="showRegister()" href="#">Register</a>
+                        </div>
+                    </div>
+                    <h2 class="text-2x1 font-bold text-white mb-6">Register</h2>
+                    <div class="inputbox relative mb-4">
+                        <input type="text" id="username" required
+                            class="w-full h-12 bg-transparent border-b-2 border-white text-white outline-none focus:border-gray-300 mt-2" />
+                        <label for="username" class="absolute left-0 transition-all text-white">Fullname</label>
+                    </div>
+                    <div class="inputbox relative mb-4">
+                        <input type="text" id="username" required
+                            class="w-full h-12 bg-transparent border-b-2 border-white text-white outline-none focus:border-gray-300 mt-2" />
+                        <label for="username" class="absolute left-0 transition-all text-white">Username</label>
+                    </div><div class="inputbox relative mb-4">
+                        <input type="text" id="username" required
+                            class="w-full h-12 bg-transparent border-b-2 border-white text-white outline-none focus:border-gray-300 mt-2" />
+                        <label for="username" class="absolute left-0 transition-all text-white">Email</label>
+                    </div><div class="inputbox relative mb-4">
+                        <input type="text" id="username" required
+                            class="w-full h-12 bg-transparent border-b-2 border-white text-white outline-none focus:border-gray-300 mt-2" />
+                        <label for="username" class="absolute left-0 transition-all text-white">Number phone</label>
+                    </div>
+                    <div class="inputbox relative mb-4">
+                        <input type="password" id="password" required
+                            class="w-full h-12 bg-transparent border-b-2 border-white text-white outline-none focus:border-gray-300 mt-2" />
+                        <label for="password" class="absolute left-0 transition-all text-white">Password</label>
+                    </div><div class="inputbox relative mb-4">
+                        <input type="text" id="username" required
+                            class="w-full h-12 bg-transparent border-b-2 border-white text-white outline-none focus:border-gray-300 mt-2" />
+                        <label for="username" class="absolute left-0 transition-all text-white">Repeat password</label>
+                    </div>
+                    <button type="submit" value="Open"
+                        class="submit w-full h-10 bg-white rounded-full text-black font-semibold text-lg cursor-pointer">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+
+            function showRegister() {
+                document.getElementById("register").classList.remove("hidden")
+                document.getElementById("login").classList.add("hidden")
+            }
+            function showLogin() {
+                document.getElementById("register").classList.add("hidden")
+                document.getElementById("login").classList.remove("hidden") 
+            }
+
+    </script>
+    </body>
+</html>
